@@ -31,9 +31,11 @@ function showItem(itemIndex){
 }
 
 function openLink(baseURL,tailString){
-	navigator.clipboard.writeText(myList[countVar]);
-    let myURL=baseURL+myList[countVar]+tailString;
-    window.open(myURL, '_blank');
+	navigator.clipboard.writeText(myList[countVar])
+    .then(()=>{
+        let myURL=baseURL+myList[countVar]+tailString;
+        window.open(myURL, '_blank');
+    })
 }
 
 
