@@ -1,0 +1,31 @@
+<html>
+<head></head>
+
+<body>
+<h1>Landing page</h1>
+<div id='main-div'>
+<h1>JS error</h1>
+</div>
+
+<button id='my-button'>Do Test 1
+</button>
+
+<script>
+
+let myHash = window.location.hash.slice(1).split('?')[0];
+if(!myHash){
+document.getElementById('main-div').innerHTML='<h1>no hash detected</h1>';
+}else{
+document.getElementById('main-div').innerHTML='<h1>'+myHash+'</h1>';
+}
+
+
+document.getElementById('my-button').onclick=function(){
+window.location.href = "https://www.owendwyer.com/url-hash/test1/#Hashworking1234";
+};
+
+</script>
+
+</body>
+
+</html>
