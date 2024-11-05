@@ -1,0 +1,23 @@
+<html>
+<head></head>
+
+<body>
+
+<h1>Test 3</h1>
+<div id='main-div'>
+<h1>JS error</h1>
+</div>
+<script>
+
+let myHash = window.location.hash.slice(1).split('?')[0];
+if(!myHash){
+document.getElementById('main-div').innerHTML='<h1>no hash detected</h1>';
+}else{
+document.getElementById('main-div').innerHTML='<h1>'+myHash+'</h1>';
+}
+
+</script>
+
+</body>
+
+</html>
