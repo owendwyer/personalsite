@@ -7,6 +7,12 @@
 <h1>JS error</h1>
 </div>
 
+<button id='my-button'>Try simple redirect
+</button>
+
+<button id='my-button-repalce'>Try replace redirect
+</button>
+
 <script>
 
 let myHash = window.location.hash.slice(1).split('?')[0];
@@ -15,6 +21,15 @@ document.getElementById('main-div').innerHTML='<h1>no hash detected</h1>';
 }else{
 document.getElementById('main-div').innerHTML='<h1>'+myHash+'</h1>';
 }
+
+
+document.getElementById('my-button').onclick=function(){
+window.location.href = "https://www.owendwyer.com/url-hash/#Hashworking1234";
+};
+
+document.getElementById('my-button-repalce').onclick=function(){
+window.location.replace("https://www.owendwyer.com/url-hash/#Hashworking1234");
+};
 
 </script>
 
