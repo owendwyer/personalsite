@@ -1,7 +1,105 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Owen Dwyer — interactive web and language tools.">
+  <title>Owen Dwyer</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html, body {
+      height: 100%;
+    }
+
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #f7f5f0;
+      color: #1a1a1a;
+      font-family: Georgia, "Times New Roman", serif;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    main {
+      text-align: center;
+      padding: 2rem;
+      max-width: 28rem;
+    }
+
+    h1 {
+      font-size: clamp(2rem, 6vw, 2.75rem);
+      font-weight: 400;
+      letter-spacing: 0.02em;
+      margin-bottom: 0.75rem;
+    }
+
+    .tagline {
+      font-family: system-ui, -apple-system, sans-serif;
+      font-size: 0.95rem;
+      color: #666;
+      margin-bottom: 2.5rem;
+    }
+
+    nav {
+      margin-bottom: 2.5rem;
+    }
+
+    nav a {
+      font-family: system-ui, -apple-system, sans-serif;
+      font-size: 0.9rem;
+      color: #1a1a1a;
+      text-decoration: none;
+      padding: 0.6rem 1.25rem;
+      border: 1px solid #ccc;
+      border-radius: 2px;
+      transition: background 0.15s, border-color 0.15s;
+    }
+
+    nav a:hover {
+      background: #fff;
+      border-color: #999;
+    }
+
+    .email a {
+      font-family: system-ui, -apple-system, sans-serif;
+      font-size: 0.9rem;
+      color: #666;
+      text-decoration: none;
+    }
+
+    .email a:hover {
+      color: #1a1a1a;
+      text-decoration: underline;
+    }
+  </style>
 </head>
 <body>
-<p>homepage deploy test — updated Jun 12, 2026</p>
+  <main>
+    <h1>Owen Dwyer</h1>
+    <p class="tagline">Interactive web · language tools</p>
+    <nav>
+      <a href="https://www.gamestolearnenglish.com">Games to Learn English</a>
+    </nav>
+    <p class="email"><a id="email-link" href="#"></a></p>
+    <script>
+      (function () {
+        var p = ['reywdo', 'liamg', 'moc'];
+        var addr = p[0].split('').reverse().join('') +
+          String.fromCharCode(64) +
+          p[1].split('').reverse().join('') +
+          '.' +
+          p[2].split('').reverse().join('');
+        var el = document.getElementById('email-link');
+        el.href = 'mailto:' + addr;
+        el.textContent = addr;
+      })();
+    </script>
+  </main>
 </body>
 </html>
